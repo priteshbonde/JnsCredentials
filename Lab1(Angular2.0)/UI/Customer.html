@@ -1,0 +1,9 @@
+﻿<div>
+    Customer Name :-<input [(ngModel)]="Currentcustomerobj.CustomerName" id="Text1" type="text" />
+    Customer Code :-<input [(ngModel)]="Currentcustomerobj.CustomerCode" id="Text1" type="text" />
+    Customer Amount :-<input [(ngModel)]="Currentcustomerobj.CustomerAmount" id="Text1" type="text" />
+    <input id="Button1" (click)="Add()" type="button" value="Add Customer" />
+    <input id="Button1" (click)="Update()" type="button" value="Update Customer" />
+    <input id="Button1" (click)="clear()" type="button" value="Clear Customer" />
+    <grid-ui [grid-data]="customers" [grid-entityname]="'Customer'" grid-selected="Select($event)"></grid-ui>
+</div>

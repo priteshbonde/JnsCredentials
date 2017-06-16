@@ -1,0 +1,28 @@
+﻿Displaying Records for {{entityName}}
+<table style="width:100%;">
+    <tr *ngFor="let columnName of gridColumns">
+        <td>{{columnName}}</td>
+    </tr>
+    <tr *ngFor="let colObj of gridData">
+        <td *ngFor="let columnName of gridColumns">
+            {{colObj[columnName]}}
+        </td>
+        <td><a href="#" (click)="Select(colObj)">Select</a></td>
+    </tr>
+
+
+</table>
+
+<!--<table style="width:100%;">
+    <tr *ngFor="let columnName of gridColumns">
+        <td>{{//columnName}}</td>
+    </tr>
+    <tr *ngFor="let colObj of gridData">
+        <td *ngFor="let columnName of gridColumns">
+            {{//colObj[columnName]}}
+        </td>
+        <td><a href="#" (click)="Select(customer)">Select</a></td>
+    </tr>
+
+
+</table>-->
